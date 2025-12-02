@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Flappy Boyz</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game-wrapper">
+    <!-- logical internal canvas resolution remains 360x640 -->
+    <canvas id="gameCanvas" width="360" height="640" aria-label="Flappy Boyz game canvas"></canvas>
+
+    <!-- START SCREEN -->
+    <div id="startScreen" class="overlay">
+      <img id="startImage" src="images/start.gif" alt="Start GIF">
+      <div class="title-fire-wrapper">
+        <h1 class="title-fire-animated" data-text="Flappy Boyz">Flappy Boyz</h1>
+        <div class="flame-sparks">
+          <span class="spark"></span><span class="spark"></span><span class="spark"></span>
+          <span class="spark"></span><span class="spark"></span><span class="spark"></span>
+        </div>
+      </div>
+
+      <p class="sub">Tap to flap • Avoid the people</p>
+
+      <!-- High score info -->
+      <p id="startHighScore" style="font-weight:700; font-size:16px;">High Score: 0</p>
+
+      <div class="controls-row">
+        <button id="startBtn">START</button>
+        <button id="muteBtn" title="Mute / Unmute">🔊</button>
+        <button id="openStoreBtn" title="Open Store">Store</button>
+        <button id="resetHighBtn" title="Reset High Score">Reset HS</button>
+      </div>
+
+      <p class="hint">Tap canvas or press Space to jump</p>
+    </div>
+
+    <!-- STORE SCREEN -->
+    <div id="storeScreen" class="overlay hidden">
+      <h2 class="store-title">Store — Skins</h2>
+      <div id="skinsGrid" class="skins-grid"></div>
+      <div class="controls-row">
+        <button id="closeStoreBtn">Close</button>
+      </div>
+      <p class="hint">Unlock by reaching required score in a run (e.g., 50).</p>
+    </div>
+
+    <!-- GAME OVER SCREEN -->
+    <div id="gameOverScreen" class="overlay hidden">
+      <img id="gameOverGif" src="images/gameover.gif" alt="Game Over GIF">
+      <h2 class="wasted-text">GAME OVER</h2>
+    </div>
+
+    <!-- CORE AUDIO -->
+    <audio id="bgMusic" src="audio/bg.mp3" loop preload="auto"></audio>
+    <audio id="startSound" src="audio/start.mp3" preload="auto"></audio>
+    <audio id="jumpSound" src="audio/jump.mp3" preload="auto"></audio>
+    <audio id="hitSound" src="audio/hit.mp3" preload="auto"></audio>
+
+    <!-- POWER-UP AUDIO (IDs must match script.js) -->
+    <audio id="audio_item_shield" src="audio/collect_shield.mp3" preload="auto"></audio>
+    <audio id="audio_item_chili"  src="audio/collect_chili.mp3"  preload="auto"></audio>
+    <audio id="audio_item_dynam"  src="audio/collect_dynamite.mp3" preload="auto"></audio>
+    <audio id="audio_item_star"   src="audio/collect_star.mp3"   preload="auto"></audio>
+    <audio id="audio_item_float"  src="audio/collect_feather.mp3"preload="auto"></audio>
+    <audio id="audio_item_auto"   src="audio/collect_auto.mp3"   preload="auto"></audio>
+    <audio id="audio_item_gold"   src="audio/collect_gold.mp3"   preload="auto"></audio>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
