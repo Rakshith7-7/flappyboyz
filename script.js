@@ -92,7 +92,7 @@ function updateMuteUI(){ muteBtn.textContent = audioMuted ? "🔇" : "🔊"; }
 const SKINS = [
   { id: "default", name: "Renzil", img: "images/skins/skin_default.png", unlockScore: 0, scale: 1.0 },
   { id: "shadow",  name: "Alone", img: "images/skins/skin_shadow.png",  unlockScore: 50, scale: 1.21 },
-  { id: "flame",   name: "Mabala",  img: "images/skins/skin_flame.png",   unlockScore: 50, scale: 1.15 }
+  { id: "flame",   name: "Mabala",  img: "images/skins/skin_flame.png",   unlockScore: 75, scale: 1.15 }
 ];
 
 // load unlocked / selected from storage
